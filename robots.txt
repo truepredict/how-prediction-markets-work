@@ -53,6 +53,9 @@ User-agent: msnbot
 Allow: /
 Crawl-delay: 5
 
+
+# ── AI CRAWLERS (allow for visibility) ─────────────────────
+
 User-agent: GPTBot
 Allow: /
 
@@ -72,6 +75,8 @@ User-agent: PerplexityBot
 Allow: /
 
 
+# ── SEO TOOLS ──────────────────────────────────────────────
+
 User-agent: AhrefsBot
 Allow: /
 Crawl-delay: 10
@@ -87,3 +92,117 @@ Crawl-delay: 10
 User-agent: DotBot
 Allow: /
 Crawl-delay: 10
+
+
+# ── BLOCK SCRAPERS & BAD BOTS ──────────────────────────────
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: emailcollector
+Disallow: /
+
+User-agent: emailsiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: emailwolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: Crescent
+Disallow: /
+
+User-agent: SlySearch
+Disallow: /
+
+User-agent: DigExt
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /wp-admin/
+
+User-agent: larbin
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+
+# ── GLOBAL RULES (all other bots) ──────────────────────────
+
+User-agent: *
+Allow: /
+
+# Block admin & system paths
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /?s=
+Disallow: /*?*replytocom=
+Disallow: /*?*attachment_id=
+Disallow: /page/*?*
+Disallow: /?p=
+Disallow: /?author=
+Disallow: /author/
+Disallow: /tag/*/page/
+Disallow: /category/*/page/
+
+# Block duplicate/thin content parameters
+Disallow: /*?orderby=
+Disallow: /*?add-to-cart=
+Disallow: /*?lang=
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?ref=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# Allow key assets
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/
+Allow: /wp-content/plugins/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+Crawl-delay: 5
+
+
+
+
+Sitemap: https://truepredict.github.io/how-prediction-markets-work/sitemap.xml
+
+
+
+# ── HOST DIRECTIVE ─────────────────────────────────────────
+
+Host: https://truepredict.github.io/how-prediction-markets-work/
